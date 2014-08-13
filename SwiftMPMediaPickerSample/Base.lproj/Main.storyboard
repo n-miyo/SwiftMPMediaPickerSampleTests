@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lK4-p2-AyJ">
+    <dependencies>
+        <deployment defaultVersion="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hWI-9c-Ogd">
+            <objects>
+                <viewController id="lK4-p2-AyJ" customClass="ViewController" customModule="SwiftMPMediaPickerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MCA-n3-uSb"/>
+                        <viewControllerLayoutGuide type="bottom" id="wVo-rB-mYe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dIK-ME-Lzp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdL-JU-tHI">
+                                <rect key="frame" x="10" y="50" width="580" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bU4-MQ-xnS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="50" width="450" height="21"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="50" width="610" height="21"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="50" width="300" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa0-Pp-m1e">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FL0-cS-twv"/>
+                                    <constraint firstAttribute="width" constant="40" id="n2j-Zu-6wk"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FL0-cS-twv"/>
+                                        <exclude reference="n2j-Zu-6wk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="225" y="196" width="30" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="144" y="283" width="30" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="FL0-cS-twv"/>
+                                        <include reference="n2j-Zu-6wk"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pressPlay:" destination="lK4-p2-AyJ" eventType="touchUpInside" id="kaV-XQ-yvo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdU-sb-zjK">
+                                <rect key="frame" x="275" y="540" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bu5-5q-nxa"/>
+                                    <constraint firstAttribute="height" constant="40" id="dn2-ze-MOb"/>
+                                </constraints>
+                                <state key="normal" title="Picker">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="219" y="135" width="43" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="168" width="43" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pressPicker:" destination="lK4-p2-AyJ" eventType="touchUpInside" id="qKv-VK-HwW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="MdU-sb-zjK" secondAttribute="centerX" id="XNX-UU-9dN"/>
+                            <constraint firstItem="PdL-JU-tHI" firstAttribute="leading" secondItem="dIK-ME-Lzp" secondAttribute="leading" constant="10" id="XRy-pc-n1U"/>
+                            <constraint firstItem="wVo-rB-mYe" firstAttribute="top" secondItem="MdU-sb-zjK" secondAttribute="bottom" constant="20" id="cNi-P6-ewX"/>
+                            <constraint firstAttribute="trailing" secondItem="PdL-JU-tHI" secondAttribute="trailing" constant="10" id="m2u-fm-8L0"/>
+                            <constraint firstAttribute="centerX" secondItem="qa0-Pp-m1e" secondAttribute="centerX" id="shu-UB-5Zo"/>
+                            <constraint firstAttribute="centerY" secondItem="qa0-Pp-m1e" secondAttribute="centerY" id="tqN-8A-e9D"/>
+                            <constraint firstItem="PdL-JU-tHI" firstAttribute="top" secondItem="MCA-n3-uSb" secondAttribute="bottom" constant="30" id="zsz-f1-Pl7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="qa0-Pp-m1e" id="aXO-rE-7zX"/>
+                        <outlet property="titleLabel" destination="PdL-JU-tHI" id="YD5-1e-XJ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wh6-cG-7YI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="283.5" y="407.25"/>
+        </scene>
+    </scenes>
+</document>
