@@ -68,8 +68,8 @@ extension ViewController {
       return
     }
 
-    let u: NSURL =
-      self.mediaItem!.valueForProperty(MPMediaItemPropertyAssetURL) as NSURL
+    let u: NSURL? =
+      self.mediaItem!.valueForProperty(MPMediaItemPropertyAssetURL) as NSURL?
     if u == nil {
       return
     }
@@ -106,7 +106,7 @@ extension ViewController : MPMediaPickerControllerDelegate {
 
     self.mediaItem = i
     self.titleLabel.text =
-      i.valueForProperty(MPMediaItemPropertyTitle) as String
+      i.valueForProperty(MPMediaItemPropertyTitle) as? String
     println("selected title: \(self.titleLabel.text)")
     println("URL: \(i.valueForProperty(MPMediaItemPropertyAssetURL))")
     self.playButton.setTitle("Play", forState:.Normal)
